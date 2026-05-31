@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Milione Reloaded Festival</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #C8A84B;
+            color: #111111;
+            line-height: 1.8;
+        }
+
+        :root {
+            --oro: #C8A84B;
+            --nero: #111111;
+            --rosso: #E01A1A;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--nero);
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            height: 50px;
+        }
+
+        nav a {
+            color: var(--rosso);
+            text-decoration: none;
+            padding: 12px 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        nav a.active {
+            border-bottom-color: var(--rosso);
+        }
+
+        /* SEZIONI */
+        section {
+            display: none;
+            min-height: calc(100vh - 50px);
+            background: var(--oro);
+            padding: 80px 40px;
+            margin-top: 50px;
+        }
+
+        section.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--nero);
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        h1 .accent {
+            font-family: 'Caveat', cursive;
+            color: var(--rosso);
+            font-size: 0.8em;
+            display: block;
+            margin: 10px 0;
+        }
+
+        h2 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--nero);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--nero);
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        .red {
+            color: var(--rosso);
+            font-weight: 700;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav a {
+                padding: 10px 15px;
+                font-size: 0.7rem;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="tab-link active" data-tab="inizio">Inizio</a>
+        <a href="#" class="tab-link" data-tab="concept">Concept</a>
+        <a href="#" class="tab-link" data-tab="programma">Programma</a>
+        <a href="#" class="tab-link" data-tab="dove">Dove</a>
+        <a href="#" class="tab-link" data-tab="crediti">Crediti</a>
+    </nav>
+
+    <section id="inizio" class="active">
+        <div class="content">
+            <h1>Il Milione<span class="accent">reloaded</span>FESTIVAL</h1>
+            <p style="font-size: 1.3rem; margin-bottom: 40px;">Il Festival delle accademie a Milano</p>
+            <p><strong>Date:</strong> <span class="red">3, 4, 5 giugno 2026</span></p>
+            <p><strong>Luogo:</strong> Fabbrica del Vapore, via Procaccini 4</p>
+            <p><strong>Ingresso:</strong> Gratuito</p>
+        </div>
+    </section>
+
+    <section id="concept">
+        <div class="content">
+            <h2>Il Concept</h2>
+            <p>Il Milione Reloaded è un festival che celebra la creatività, il design e la cultura contemporanea. Un dialogo tra tradizione e innovazione, ispirato al viaggio di Marco Polo e al concetto di contaminazione culturale.</p>
+            <p>Tre giorni di immersione nel pensiero creativo, con protagonisti studenti e professionisti provenienti da ACME Milano, HSLU e CPM Music Institute.</p>
+        </div>
+    </section>
+
+    <section id="programma">
+        <div class="content">
+            <h2>Il Programma</h2>
+            <p><strong>Mercoledì 3 e giovedì 4 giugno</strong><br>
+            <span class="red">14:00 – 20:00</span><br>
+            Workshop, incontri, lezioni e work in progress aperto al pubblico.</p>
+            
+            <p style="margin-top: 30px;"><strong>Venerdì 5 giugno</strong><br>
+            <span class="red">18:00 – 23:00</span><br>
+            Mostra, performance e party.</p>
+
+            <p style="margin-top: 30px;"><strong>Open Day</strong><br>
+            <span class="red">Venerdì 5 giugno, 14:00 – 16:00</span><br>
+            Scopri le accademie e i loro programmi.</p>
+        </div>
+    </section>
+
+    <section id="dove">
+        <div class="content">
+            <h2>Dove</h2>
+            <p><strong>Fabbrica del Vapore</strong></p>
+            <p>via Procaccini 4, Milano<br>
+            presso CareOf e Connecting Cultures</p>
+            <p style="margin-top: 30px; font-size: 1.2rem;" class="red">INGRESSO GRATUITO</p>
+        </div>
+    </section>
+
+    <section id="crediti">
+        <div class="content">
+            <h2>Crediti</h2>
+            
+            <p style="margin-top: 30px;"><strong>Organizzato da</strong><br>
+            ACME Milano<br>
+            HSLU (Lucerne University of Applied Sciences and Arts)<br>
+            CPM Music Institute</p>
+
+            <p style="margin-top: 30px;"><strong>A cura di</strong><br>
+            Pierluigi Anselmi</p>
+
+            <p style="margin-top: 30px;"><strong>Partner</strong><br>
+            Deles · Scatolificio Jannelli & Volpi · Hypereden · Propp Grafica</p>
+
+            <p style="margin-top: 50px; font-size: 0.9rem; opacity: 0.8;">© 2026 Il Milione Reloaded Festival</p>
+        </div>
+    </section>
+
+    <script>
+        const tabLinks = document.querySelectorAll('.tab-link');
+        const sections = document.querySelectorAll('section');
+
+        tabLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const tabName = link.getAttribute('data-tab');
+                
+                tabLinks.forEach(l => l.classList.remove('active'));
+                sections.forEach(s => s.classList.remove('active'));
+                
+                link.classList.add('active');
+                document.getElementById(tabName).classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
