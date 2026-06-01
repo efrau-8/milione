@@ -36,15 +36,16 @@
             display: flex;
             justify-content: center;
             height: 50px;
+            flex-wrap: wrap;
         }
 
         nav a {
             color: var(--rosso);
             text-decoration: none;
-            padding: 12px 25px;
+            padding: 12px 20px;
             font-weight: 700;
             text-transform: uppercase;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             letter-spacing: 1px;
             border-bottom: 3px solid transparent;
             cursor: pointer;
@@ -102,6 +103,15 @@
             letter-spacing: -1px;
         }
 
+        h3 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--nero);
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
         p {
             font-size: 1.1rem;
             margin-bottom: 15px;
@@ -117,11 +127,18 @@
             font-weight: 700;
         }
 
+        .day-block {
+            background: rgba(255,255,255,0.2);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--rosso);
+        }
+
         /* RESPONSIVE */
         @media (max-width: 768px) {
             nav a {
-                padding: 10px 15px;
-                font-size: 0.7rem;
+                padding: 10px 12px;
+                font-size: 0.65rem;
             }
 
             section {
@@ -135,6 +152,10 @@
             h2 {
                 font-size: 1.8rem;
             }
+
+            .day-block {
+                padding: 20px;
+            }
         }
 
     </style>
@@ -143,12 +164,12 @@
 
     <nav>
         <a href="#" class="tab-link active" data-tab="inizio">Inizio</a>
-        <a href="#" class="tab-link" data-tab="concept">Concept</a>
         <a href="#" class="tab-link" data-tab="programma">Programma</a>
         <a href="#" class="tab-link" data-tab="dove">Dove</a>
         <a href="#" class="tab-link" data-tab="crediti">Crediti</a>
     </nav>
 
+    <!-- INIZIO -->
     <section id="inizio" class="active">
         <div class="content">
             <h1>Il Milione<span class="accent">reloaded</span>FESTIVAL</h1>
@@ -159,41 +180,42 @@
         </div>
     </section>
 
-    <section id="concept">
-        <div class="content">
-            <h2>Il Concept</h2>
-            <p>Il Milione Reloaded è un festival che celebra la creatività, il design e la cultura contemporanea. Un dialogo tra tradizione e innovazione, ispirato al viaggio di Marco Polo e al concetto di contaminazione culturale.</p>
-            <p>Tre giorni di immersione nel pensiero creativo, con protagonisti studenti e professionisti provenienti da ACME Milano, HSLU e CPM Music Institute.</p>
-        </div>
-    </section>
-
+    <!-- PROGRAMMA -->
     <section id="programma">
         <div class="content">
             <h2>Il Programma</h2>
-            <p><strong>Mercoledì 3 e giovedì 4 giugno</strong><br>
-            <span class="red">14:00 – 20:00</span><br>
-            Workshop, incontri, lezioni e work in progress aperto al pubblico.</p>
-            
-            <p style="margin-top: 30px;"><strong>Venerdì 5 giugno</strong><br>
-            <span class="red">18:00 – 23:00</span><br>
-            Mostra, performance e party.</p>
 
-            <p style="margin-top: 30px;"><strong>Open Day</strong><br>
-            <span class="red">Venerdì 5 giugno, 14:00 – 16:00</span><br>
-            Scopri le accademie e i loro programmi.</p>
+            <div class="day-block">
+                <h3>Giorno 1 — Mercoledì 3 giugno</h3>
+                <p><strong>09:00 – 20:00</strong></p>
+                <p>Allestimento Mostra con Del Giudice. Workshop Jannelli Volpi Taccuini (Romano). Lezioni Milione Reloaded: Fanzine (Ricci), Comunicazione (Sonda). Merenda e Conferenza con Connecting Cultures (16:00–17:00). Conferenza serale (18:00–20:00).</p>
+            </div>
+
+            <div class="day-block">
+                <h3>Giorno 2 — Giovedì 4 giugno</h3>
+                <p><strong>09:00 – 20:00</strong></p>
+                <p>Allestimento Mostra. Workshop ACMExHSLU Disegno sul cortile. Workshop Jannelli Volpi Taccuini (Romano). Lezioni: Fanzine (Ricci), Website ospite (Salvi), Comunicazione (Sonda). Mobile Bar HSLU itinerante. Merenda e Conferenza CC (16:00–17:00). Prova generale (17:00–18:00). Conferenza/Workshop CC serale (18:00–20:00).</p>
+            </div>
+
+            <div class="day-block">
+                <h3>Giorno 3 — Venerdì 5 giugno</h3>
+                <p><strong>14:00 – 24:00</strong></p>
+                <p><strong class="red">Open Day 14:00–16:00</strong> con workshop Jannelli Volpi e Teatro Burri. Allestimento Mostra. Lezioni: Fanzine (Ricci), Comunicazione (Sonda). Merenda Conferenza CC (16:30–17:00). <strong class="red">Mostra e Performance 18:00–20:00</strong>. Beer Project HSLU. <strong class="red">Festa 20:00–24:00</strong>.</p>
+            </div>
         </div>
     </section>
 
+    <!-- DOVE -->
     <section id="dove">
         <div class="content">
             <h2>Dove</h2>
             <p><strong>Fabbrica del Vapore</strong></p>
-            <p>via Procaccini 4, Milano<br>
-            presso CareOf e Connecting Cultures</p>
+            <p>via Procaccini 4, Milano<br>presso CareOf e Connecting Cultures</p>
             <p style="margin-top: 30px; font-size: 1.2rem;" class="red">INGRESSO GRATUITO</p>
         </div>
     </section>
 
+    <!-- CREDITI -->
     <section id="crediti">
         <div class="content">
             <h2>Crediti</h2>
