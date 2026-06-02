@@ -1,257 +1,60 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il Milione Reloaded Festival</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@700&family=Caveat:wght@700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<!-- PROGRAMMA -->
+<section id="programma">
+    <div class="content">
+        <h2>Il Programma</h2>
 
-        body {
-            font-family: 'DM Sans', sans-serif;
-            background: #C8A84B;
-            color: #111111;
-            line-height: 1.8;
-        }
-
-        :root {
-            --oro: #C8A84B;
-            --nero: #111111;
-            --rosso: #E01A1A;
-        }
-
-        /* NAVBAR */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: var(--nero);
-            z-index: 100;
-            display: flex;
-            justify-content: center;
-            height: 50px;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: var(--rosso);
-            text-decoration: none;
-            padding: 12px 20px;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-            border-bottom: 3px solid transparent;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        nav a.active {
-            border-bottom-color: var(--rosso);
-        }
-
-        /* SEZIONI */
-        section {
-            display: none;
-            min-height: calc(100vh - 50px);
-            background: var(--oro);
-            padding: 80px 40px;
-            margin-top: 50px;
-        }
-
-        section.active {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            font-weight: 900;
-            color: var(--nero);
-            margin-bottom: 20px;
-            line-height: 1.1;
-        }
-
-        h1 .accent {
-            font-family: 'Caveat', cursive;
-            color: var(--rosso);
-            font-size: 0.8em;
-            display: block;
-            margin: 10px 0;
-        }
-
-        h2 {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--nero);
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: -1px;
-        }
-
-        h3 {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--nero);
-            margin-top: 40px;
-            margin-bottom: 15px;
-        }
-
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            color: var(--nero);
-        }
-
-        strong {
-            font-weight: 700;
-        }
-
-        .red {
-            color: var(--rosso);
-            font-weight: 700;
-        }
-
-        .day-block {
-            background: rgba(255,255,255,0.2);
-            padding: 30px;
-            margin-bottom: 30px;
-            border-left: 4px solid var(--rosso);
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            nav a {
-                padding: 10px 12px;
-                font-size: 0.65rem;
-            }
-
-            section {
-                padding: 60px 20px;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            .day-block {
-                padding: 20px;
-            }
-        }
-
-    </style>
-</head>
-<body>
-
-    <nav>
-        <a href="#" class="tab-link active" data-tab="inizio">Inizio</a>
-        <a href="#" class="tab-link" data-tab="programma">Programma</a>
-        <a href="#" class="tab-link" data-tab="dove">Dove</a>
-        <a href="#" class="tab-link" data-tab="crediti">Crediti</a>
-    </nav>
-
-    <!-- INIZIO -->
-    <section id="inizio" class="active">
-        <div class="content">
-            <h1>Il Milione<span class="accent">reloaded</span>FESTIVAL</h1>
-            <p style="font-size: 1.3rem; margin-bottom: 40px;">Il Festival delle accademie a Milano</p>
-            <p><strong>Date:</strong> <span class="red">3, 4, 5 giugno 2026</span></p>
-            <p><strong>Luogo:</strong> Fabbrica del Vapore, via Procaccini 4</p>
-            <p><strong>Ingresso:</strong> Gratuito</p>
-        </div>
-    </section>
-
-    <!-- PROGRAMMA -->
-    <section id="programma">
-        <div class="content">
-            <h2>Il Programma</h2>
-
-            <div class="day-block">
-                <h3>Giorno 1 — Mercoledì 3 giugno</h3>
-                <p><strong>09:00 – 20:00</strong></p>
-                <p>Allestimento Mostra con Del Giudice. Workshop Jannelli Volpi Taccuini (Romano). Lezioni Milione Reloaded: Fanzine (Ricci), Comunicazione (Sonda). Merenda e Conferenza con Connecting Cultures (16:00–17:00). Conferenza serale (18:00–20:00).</p>
-            </div>
-
-            <div class="day-block">
-                <h3>Giorno 2 — Giovedì 4 giugno</h3>
-                <p><strong>09:00 – 20:00</strong></p>
-                <p>Allestimento Mostra. Workshop ACMExHSLU Disegno sul cortile. Workshop Jannelli Volpi Taccuini (Romano). Lezioni: Fanzine (Ricci), Website ospite (Salvi), Comunicazione (Sonda). Mobile Bar HSLU itinerante. Merenda e Conferenza CC (16:00–17:00). Prova generale (17:00–18:00). Conferenza/Workshop CC serale (18:00–20:00).</p>
-            </div>
-
-            <div class="day-block">
-                <h3>Giorno 3 — Venerdì 5 giugno</h3>
-                <p><strong>14:00 – 24:00</strong></p>
-                <p><strong class="red">Open Day 14:00–16:00</strong> con workshop Jannelli Volpi e Teatro Burri. Allestimento Mostra. Lezioni: Fanzine (Ricci), Comunicazione (Sonda). Merenda Conferenza CC (16:30–17:00). <strong class="red">Mostra e Performance 18:00–20:00</strong>. Beer Project HSLU. <strong class="red">Festa 20:00–24:00</strong>.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- DOVE -->
-    <section id="dove">
-        <div class="content">
-            <h2>Dove</h2>
-            <p><strong>Fabbrica del Vapore</strong></p>
-            <p>via Procaccini 4, Milano<br>presso CareOf e Connecting Cultures</p>
-            <p style="margin-top: 30px; font-size: 1.2rem;" class="red">INGRESSO GRATUITO</p>
-        </div>
-    </section>
-
-    <!-- CREDITI -->
-    <section id="crediti">
-        <div class="content">
-            <h2>Crediti</h2>
+        <div class="day-block">
+            <h3>Giorno 1 — Mercoledì 3 giugno</h3>
             
-            <p style="margin-top: 30px;"><strong>Organizzato da</strong><br>
-            ACME Milano<br>
-            HSLU (Lucerne University of Applied Sciences and Arts)<br>
-            CPM Music Institute</p>
+            <p><strong>Workshop e laboratori</strong></p>
+            <p>Allestimento Mostra (ACME): 09:00–13:00 | 14:00–18:00<br>
+            Jannelli Volpi Taccuini (ACME): 12:00–16:00<br>
+            Mobile Bar (HSLU): 14:00–18:00<br>
+            Progetto Sartoriale (HSLU): 14:00–17:00</p>
 
-            <p style="margin-top: 30px;"><strong>A cura di</strong><br>
-            Pierluigi Anselmi</p>
+            <p><strong>Lezioni aperte e laboratorio</strong></p>
+            <p>Durante la giornata</p>
 
-            <p style="margin-top: 30px;"><strong>Partner</strong><br>
-            Deles · Scatolificio Jannelli & Volpi · Hypereden · Propp Grafica</p>
-
-            <p style="margin-top: 50px; font-size: 0.9rem; opacity: 0.8;">© 2026 Il Milione Reloaded Festival</p>
+            <p><strong>Merenda Connecting Culture:</strong> 16:00–17:00</p>
+            <p><strong>Conferenza:</strong> 18:00–20:00</p>
         </div>
-    </section>
 
-    <script>
-        const tabLinks = document.querySelectorAll('.tab-link');
-        const sections = document.querySelectorAll('section');
+        <div class="day-block">
+            <h3>Giorno 2 — Giovedì 4 giugno</h3>
+            
+            <p><strong>Workshop e laboratori</strong></p>
+            <p>Allestimento Mostra (ACME): 09:00–13:00 | 14:00–18:00<br>
+            ACMExHSLU Disegno sul cortile: 11:00–18:00<br>
+            Jannelli Volpi Taccuini (ACME): 12:00–16:00<br>
+            Mobile Bar (HSLU): 14:00–18:00<br>
+            Progetto Sartoriale (HSLU): 14:00–17:00</p>
 
-        tabLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const tabName = link.getAttribute('data-tab');
-                
-                tabLinks.forEach(l => l.classList.remove('active'));
-                sections.forEach(s => s.classList.remove('active'));
-                
-                link.classList.add('active');
-                document.getElementById(tabName).classList.add('active');
-            });
-        });
-    </script>
+            <p><strong>Lezioni aperte e laboratorio</strong></p>
+            <p>Durante la giornata</p>
 
-</body>
-</html>
+            <p><strong>Merenda Connecting Culture:</strong> 16:00–17:00<br>
+            <strong>Prova generale:</strong> 17:00–18:00<br>
+            <strong>Conferenza/Workshop Connecting Culture:</strong> 18:00–20:00</p>
+        </div>
+
+        <div class="day-block">
+            <h3>Giorno 3 — Venerdì 5 giugno</h3>
+            
+            <p><strong>Workshop e laboratori</strong></p>
+            <p>Allestimento Mostra (ACME): 09:00–13:00 | 14:00–18:00<br>
+            Mobile Bar (HSLU): 14:00–18:00</p>
+
+            <p><strong>Open Day:</strong> 14:00–16:00<br>
+            <em>Jannelli Volpi Taccuini Workshop<br>
+            Teatro Burri — JV Carte Crimella Workshop</em></p>
+
+            <p><strong>Lezioni aperte e laboratorio</strong></p>
+            <p>Durante la giornata</p>
+
+            <p><strong>Merenda Connecting Culture:</strong> 16:00–17:00<br>
+            <strong>Performance e Mostra:</strong> 18:00–20:00<br>
+            <strong>Beer Project (HSLU):</strong> 18:00–23:00<br>
+            <strong class="red">Festa:</strong> 20:00–24:00</p>
+        </div>
+    </div>
+</section>
