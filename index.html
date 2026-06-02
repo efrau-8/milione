@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il Milione Reloaded Festival</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <title>milione reloaded festival</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -25,26 +25,36 @@
             --rosso: #E01A1A;
         }
 
-        /* NAVBAR */
-        nav {
+        header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: var(--nero);
+            height: 100px;
             z-index: 100;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background-image 0.8s ease-in-out;
+        }
+
+        nav {
+            position: relative;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
             display: flex;
             justify-content: center;
-            height: 50px;
+            align-items: center;
+            height: 100%;
             flex-wrap: wrap;
         }
 
         nav a {
-            color: var(--rosso);
+            color: inherit;
             text-decoration: none;
             padding: 12px 20px;
             font-weight: 700;
-            text-transform: uppercase;
+            text-transform: lowercase;
             font-size: 0.75rem;
             letter-spacing: 1px;
             border-bottom: 3px solid transparent;
@@ -53,16 +63,19 @@
         }
 
         nav a.active {
-            border-bottom-color: var(--rosso);
+            border-bottom-color: currentColor;
         }
 
-        /* SEZIONI */
+        nav a:hover {
+            opacity: 0.8;
+        }
+
         section {
             display: none;
-            min-height: calc(100vh - 50px);
+            min-height: calc(100vh - 100px);
             background: var(--oro);
-            padding: 80px 40px;
-            margin-top: 50px;
+            padding: 100px 40px 40px;
+            margin-top: 100px;
         }
 
         section.active {
@@ -77,20 +90,13 @@
         }
 
         h1 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'DM Sans', sans-serif;
             font-size: 4rem;
-            font-weight: 900;
-            color: var(--nero);
+            font-weight: 700;
+            color: var(--rosso);
             margin-bottom: 20px;
             line-height: 1.1;
-        }
-
-        h1 .accent {
-            font-family: 'Caveat', cursive;
-            color: var(--rosso);
-            font-size: 0.8em;
-            display: block;
-            margin: 10px 0;
+            text-transform: lowercase;
         }
 
         h2 {
@@ -99,7 +105,7 @@
             font-weight: 700;
             color: var(--nero);
             margin-bottom: 30px;
-            text-transform: uppercase;
+            text-transform: lowercase;
             letter-spacing: -1px;
         }
 
@@ -110,12 +116,14 @@
             color: var(--nero);
             margin-top: 40px;
             margin-bottom: 15px;
+            text-transform: lowercase;
         }
 
         p {
             font-size: 1.1rem;
             margin-bottom: 15px;
             color: var(--nero);
+            text-transform: lowercase;
         }
 
         strong {
@@ -151,13 +159,13 @@
             font-size: 1.1rem;
             text-decoration: none;
             transition: opacity 0.3s;
+            text-transform: lowercase;
         }
 
         .pdf-link-box a:hover {
             opacity: 0.8;
         }
 
-        /* RESPONSIVE */
         @media (max-width: 768px) {
             nav a {
                 padding: 10px 12px;
@@ -165,7 +173,7 @@
             }
 
             section {
-                padding: 60px 20px;
+                padding: 110px 20px 40px;
             }
 
             h1 {
@@ -189,129 +197,146 @@
 </head>
 <body>
 
+    <header id="header"></header>
+
     <nav>
-        <a href="#" class="tab-link active" data-tab="inizio">Inizio</a>
-        <a href="#" class="tab-link" data-tab="programma">Programma</a>
-        <a href="#" class="tab-link" data-tab="dove">Dove</a>
-        <a href="#" class="tab-link" data-tab="crediti">Crediti</a>
+        <a href="#" class="tab-link active" data-tab="inizio">homepage</a>
+        <a href="#" class="tab-link" data-tab="programma">programma</a>
+        <a href="#" class="tab-link" data-tab="dove">dove</a>
+        <a href="#" class="tab-link" data-tab="crediti">crediti</a>
     </nav>
 
-    <!-- INIZIO -->
     <section id="inizio" class="active">
         <div class="content">
-            <h1>Il Milione<span class="accent">reloaded</span>FESTIVAL</h1>
-            <p style="font-size: 1.3rem; margin-bottom: 40px;">Il Festival delle accademie a Milano</p>
-            <p><strong>Date:</strong> <span class="red">3, 4, 5 giugno 2026</span></p>
-            <p><strong>Luogo:</strong> Fabbrica del Vapore, via Procaccini 4</p>
-            <p><strong>Ingresso:</strong> Gratuito</p>
+            <h1>milione reloaded festival</h1>
+            <p style="font-size: 1.3rem; margin-bottom: 40px; text-transform: lowercase;">il festival delle accademie a milano</p>
+            <p><strong>date:</strong> <span class="red">3, 4, 5 giugno 2026</span></p>
+            <p><strong>luogo:</strong> fabbrica del vapore, via procaccini 4</p>
+            <p><strong>ingresso:</strong> gratuito</p>
         </div>
     </section>
 
-    <!-- PROGRAMMA -->
     <section id="programma">
         <div class="content">
-            <h2>Il Programma</h2>
+            <h2>il programma</h2>
 
             <div class="day-block">
-                <h3>Giorno 1 — Mercoledì 3 giugno</h3>
+                <h3>giorno 1 — mercoledì 3 giugno</h3>
                 
-                <p><strong>Workshop e laboratori</strong></p>
-                <p>Allestimento Mostra (ACME): 09:00–13:00 | 14:00–18:00<br>
-                Jannelli&Volpi Taccuini (ACME): 12:00–16:00<br>
-                Mobile Bar (HSLU): 14:00–18:00<br>
-                Progetto Sartoriale (HSLU): 14:00–17:00</p>
+                <p><strong>workshop e laboratori</strong></p>
+                <p>allestimento mostra (acme): 09:00–13:00 | 14:00–18:00<br>
+                jannelli&volpi taccuini (acme): 12:00–16:00<br>
+                mobile bar (hslu): 14:00–18:00</p>
 
-                <p><strong>Lezioni aperte e laboratorio</strong></p>
-                <p>Durante la giornata</p>
+                <p><strong>lezioni aperte e laboratorio</strong></p>
+                <p>durante la giornata</p>
 
-                <p><strong>Merenda Connecting Culture:</strong> 16:00–17:00</p>
+                <p><strong>merenda connecting culture:</strong> 16:00–17:00</p>
             </div>
 
             <div class="day-block">
-                <h3>Giorno 2 — Giovedì 4 giugno</h3>
+                <h3>giorno 2 — giovedì 4 giugno</h3>
                 
-                <p><strong>Workshop e laboratori</strong></p>
-                <p>Allestimento Mostra (ACME): 09:00–13:00 | 14:00–18:00<br>
-                ACMExHSLU Disegno sul cortile: 11:00–18:00<br>
-                Jannelli&Volpi Taccuini (ACME): 12:00–16:00<br>
-                Mobile Bar (HSLU): 14:00–18:00<br>
-                Progetto Sartoriale (HSLU): 14:00–17:00</p>
+                <p><strong>workshop e laboratori</strong></p>
+                <p>allestimento mostra (acme): 09:00–13:00 | 14:00–18:00<br>
+                acmexhslu disegno sul cortile: 11:00–18:00<br>
+                jannelli&volpi taccuini (acme): 12:00–16:00<br>
+                mobile bar (hslu): 14:00–18:00</p>
 
-                <p><strong>Lezioni aperte e laboratorio</strong></p>
-                <p>Durante la giornata</p>
+                <p><strong>lezioni aperte e laboratorio</strong></p>
+                <p>durante la giornata</p>
 
-                <p><strong>Merenda Connecting Culture:</strong> 16:00–17:00<br>
-                <strong>Prova generale:</strong> 17:00–18:00</p>
+                <p><strong>merenda connecting culture:</strong> 16:00–17:00<br>
+                <strong>prova generale:</strong> 17:00–18:00</p>
             </div>
 
             <div class="day-block">
-                <h3>Giorno 3 — Venerdì 5 giugno</h3>
+                <h3>giorno 3 — venerdì 5 giugno</h3>
                 
-                <p><strong>Workshop e laboratori</strong></p>
-                <p>Allestimento Mostra (ACME): 09:00–13:00 | 14:00–18:00<br>
-                Mobile Bar (HSLU): 14:00–18:00</p>
+                <p><strong>workshop e laboratori</strong></p>
+                <p>allestimento mostra (acme): 09:00–13:00 | 14:00–18:00<br>
+                mobile bar (hslu): 14:00–18:00<br>
+                progetto sartoriale (hslu): 14:00–17:00</p>
 
-                <p><strong>Open Day:</strong> 14:00–16:00<br>
-                <em>Jannelli&Volpi Taccuini Workshop<br>
-                Jannelli&Volpi 100 margherite per il Teatro Burri Workshop</em></p>
+                <p><strong>open day:</strong> 14:00–16:00<br>
+                <em>jannelli&volpi taccuini workshop<br>
+                jannelli&volpi 100 margherite per il teatro burri workshop</em></p>
 
-                <p><strong>Lezioni aperte e laboratorio</strong></p>
-                <p>Durante la giornata</p>
+                <p><strong>lezioni aperte e laboratorio</strong></p>
+                <p>durante la giornata</p>
 
-                <p><strong>Merenda Connecting Culture:</strong> 16:00–17:00<br>
-                <strong>Performance e Mostra:</strong> 18:00–20:00<br>
-                <strong>Beer Project (HSLU):</strong> 18:00–23:00<br>
-                <strong class="red">Festa:</strong> 20:00–23:00</p>
+                <p><strong>merenda connecting culture:</strong> 16:00–17:00<br>
+                <strong>performance e mostra:</strong> 18:00–20:00<br>
+                <strong>beer project (hslu):</strong> 18:00–23:00<br>
+                <strong class="red">festa:</strong> 20:00–23:00</p>
             </div>
 
             <div class="pdf-link-box">
-                <a href="programma-completo.pdf">↓ Scarica il programma completo (PDF) ↓</a>
+                <a href="programma-completo.pdf">↓ scarica il programma completo (pdf) ↓</a>
             </div>
         </div>
     </section>
 
-    <!-- DOVE -->
     <section id="dove">
         <div class="content">
-            <h2>Dove</h2>
-            <p><strong>Fabbrica del Vapore</strong></p>
-            <p>via Procaccini 4, Milano<br>presso CareOf e Connecting Cultures</p>
-            <p style="margin-top: 30px; font-size: 1.2rem;" class="red">INGRESSO GRATUITO</p>
+            <h2>dove</h2>
+            <p><strong>fabbrica del vapore</strong></p>
+            <p>via procaccini 4, milano<br>presso careof e connecting cultures</p>
+            <p style="margin-top: 30px; font-size: 1.2rem;" class="red">ingresso gratuito</p>
         </div>
     </section>
 
-    <!-- CREDITI -->
     <section id="crediti">
         <div class="content">
-            <h2>Crediti</h2>
+            <h2>crediti</h2>
             
-            <p style="margin-top: 30px;"><strong>Organizzato da</strong><br>
-            ACME Milano<br>
-            HSLU (Lucerne University of Applied Sciences and Arts)<br>
-            CPM Music Institute</p>
+            <p style="margin-top: 30px;"><strong>organizzato da</strong><br>
+            acme milano<br>
+            hslu (lucerne university of applied sciences and arts)<br>
+            cpm music institute</p>
 
-            <p style="margin-top: 30px;"><strong>A cura di</strong><br>
-            Pierluigi Anselmi</p>
+            <p style="margin-top: 30px;"><strong>a cura di</strong><br>
+            pierluigi anselmi</p>
 
-            <p style="margin-top: 30px;"><strong>Partner</strong><br>
-            Deles · Scatolificio Jannelli&Volpi · Hypereden · Propp Grafica</p>
+            <p style="margin-top: 30px;"><strong>partner</strong><br>
+            deles · scatolificio jannelli&volpi · hypereden · propp grafica</p>
 
-            <p style="margin-top: 50px; font-size: 0.9rem; opacity: 0.8;">© 2026 Il Milione Reloaded Festival</p>
+            <p style="margin-top: 50px; font-size: 0.9rem; opacity: 0.8;">© 2026 milione reloaded festival</p>
         </div>
     </section>
 
     <script>
+        const images = [
+            'jannelli-volpi-1.jpg', 'jannelli-volpi-2.jpg', 'jannelli-volpi-3.jpg', 'jannelli-volpi-4.jpg', 'jannelli-volpi-5.jpg',
+            'jannelli-volpi-6.jpg', 'jannelli-volpi-7.jpg', 'jannelli-volpi-8.jpg', 'jannelli-volpi-9.jpg', 'jannelli-volpi-10.jpg',
+            'jannelli-volpi-11.jpg', 'jannelli-volpi-12.jpg', 'jannelli-volpi-13.jpg', 'jannelli-volpi-14.jpg', 'jannelli-volpi-15.jpg',
+            'jannelli-volpi-16.jpg', 'jannelli-volpi-17.jpg', 'jannelli-volpi-18.jpg', 'jannelli-volpi-19.jpg', 'jannelli-volpi-20.jpg',
+            'jannelli-volpi-21.jpg', 'jannelli-volpi-22.jpg', 'jannelli-volpi-23.jpg', 'jannelli-volpi-24.jpg', 'jannelli-volpi-25.jpg',
+            'jannelli-volpi-26.jpg', 'jannelli-volpi-27.jpg', 'jannelli-volpi-28.jpg', 'jannelli-volpi-29.jpg', 'jannelli-volpi-30.jpg',
+            'jannelli-volpi-31.jpg', 'jannelli-volpi-32.jpg', 'jannelli-volpi-33.jpg', 'jannelli-volpi-34.jpg', 'jannelli-volpi-35.jpg'
+        ];
+
+        let currentImageIndex = 0;
+        const header = document.getElementById('header');
         const tabLinks = document.querySelectorAll('.tab-link');
         const sections = document.querySelectorAll('section');
+
+        function changeImage() {
+            header.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+            const nav = document.querySelector('nav');
+            nav.style.color = currentImageIndex % 2 === 0 ? '#FFFFFF' : '#111111';
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+        }
+
+        setInterval(changeImage, 4000);
+        changeImage();
 
         tabLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const tabName = link.getAttribute('data-tab');
-                
                 tabLinks.forEach(l => l.classList.remove('active'));
                 sections.forEach(s => s.classList.remove('active'));
-                
                 link.classList.add('active');
                 document.getElementById(tabName).classList.add('active');
             });
